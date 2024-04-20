@@ -1,0 +1,27 @@
+#ifndef REVERSE_H
+#define REVERSE_H
+
+#include "LinkedQueue.h"
+#include "LinkedStack.h"
+
+template <typename T> void reverseLinkedQueue(LinkedQueue<T> &queue) {
+  LinkedStack<T> stack;
+  while (!queue.isEmpty()) {
+    stack.push(queue.dequeue());
+  }
+  while (!stack.isEmpty()) {
+    queue.enqueue(stack.pop());
+  }
+}
+
+template <typename T> void reverseLinkedStack(LinkedStack<T> &stack) {
+  LinkedQueue<T> queue;
+  while (!stack.isEmpty()) {
+    queue.enqueue(stack.pop());
+  }
+  while (!queue.isEmpty()) {
+    stack.push(queue.dequeue());
+  }
+}
+
+#endif // REVERSE_H
