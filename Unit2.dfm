@@ -1,8 +1,8 @@
 object Form2: TForm2
   Left = 0
   Top = 0
-  Width = 802
-  Height = 471
+  Width = 808
+  Height = 480
   AutoScroll = True
   AutoSize = True
   BorderWidth = 10
@@ -21,7 +21,7 @@ object Form2: TForm2
     Top = 0
     Width = 770
     Height = 200
-    ActivePage = tsDLL
+    ActivePage = tsCLL
     ParentShowHint = False
     ShowHint = True
     TabOrder = 0
@@ -808,8 +808,14 @@ object Form2: TForm2
         Width = 755
         Height = 165
         HelpType = htKeyword
+        Font.Charset = GB2312_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = []
         Lines.Strings = (
           'reLQ')
+        ParentFont = False
         ReadOnly = True
         SpellChecking = True
         TabOrder = 0

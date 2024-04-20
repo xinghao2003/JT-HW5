@@ -20,12 +20,13 @@ public:
 
   ~LinkedStack() { clear(); }
 
+  // Pushes an element onto the stack.
   bool push(T element) {
     Node *newNode = new Node{element, top};
 	top = newNode;
 	return true;
   }
-
+  // Pops the top element from the stack and returns it; throws if the stack is empty.
   T pop() {
     if (top == nullptr) {
       throw out_of_range("Stack is empty");
@@ -46,6 +47,7 @@ public:
 
   bool isEmpty() const { return top == nullptr; }
 
+  // Clears all elements from the stack.
   bool clear() {
     while (top != nullptr) {
       pop();

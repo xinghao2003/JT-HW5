@@ -20,6 +20,7 @@ public:
 
   ~LinkedQueue() { clear(); }
 
+  // Enqueues an element at the end of the queue.
   bool enqueue(T element) {
     Node *newNode = new Node{element, nullptr};
     if (rear == nullptr) {
@@ -31,6 +32,7 @@ public:
     return true;
   }
 
+  // Dequeues and returns the element at the front of the queue; throws if the queue is empty.
   T dequeue() {
     if (front == nullptr) {
       throw out_of_range("Queue is empty");
@@ -47,6 +49,7 @@ public:
 
   bool isEmpty() const { return front == nullptr; }
 
+  // Clears all elements from the queue.
   bool clear() {
     while (front != nullptr) {
       dequeue();
